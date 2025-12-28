@@ -1,5 +1,4 @@
 name: 007-of-three Daily Docker Cycle (with IP Gate) Daily (04:40 AM IST)
-
 on:
   schedule:
     # 23:10 UTC = 04:40 IST
@@ -162,9 +161,7 @@ jobs:
           ACCOUNT_1: ${{ secrets.ACCOUNT_1 }}
           ACCOUNT_2: ${{ secrets.ACCOUNT_2 }}
           ACCOUNT_3: ${{ secrets.ACCOUNT_3 }}
-          ARTIFACT_NAME_CUSTOM: ${{ secrets.ARTIFACT_NAME_CUSTOM }}
-          TARGET_SCRIPT_URL: ${{ env.TARGET_SCRIPT_URL }}
-          TARGET_RESTORE_URL: ${{ env.TARGET_RESTORE_URL }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: ./script.sh
 
       - name: Upload Sessions Artifact
